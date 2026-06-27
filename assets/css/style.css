@@ -1,0 +1,103 @@
+/* Main stylesheet for Online College Voting System - Module 2
+   Theme: White background, blue buttons, gray cards, minimal shadows, rounded corners
+   Responsive mainly for laptops (1366x768 and larger) but works on tablets/phones.
+*/
+
+:root{
+  --blue: #1976d2;
+  --card: #f6f6f6;
+  --text: #222;
+  --muted: #6b7280;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Roboto, Arial, sans-serif;
+  background:#fff;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 16px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.site-title{
+  font-size:20px;
+  font-weight:600;
+  color:var(--text);
+  text-decoration:none;
+}
+
+.nav{
+  display:flex;
+  gap:10px;
+}
+
+a.btn{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:8px 14px;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
+
+.lead{color:var(--muted); margin-top:6px}
+
+.login-options{
+  display:flex;
+  gap:14px;
+  margin-top:18px;
+}
+
+.login-option{
+  flex:1;
+  padding:18px;
+  border-radius:8px;
+  background:#fff;
+  border:1px solid #e6e6e6;
+  text-align:center;
+}
+
+.login-option h3{margin:0 0 8px 0}
+.login-option p{margin:0 0 12px 0; color:var(--muted)}
+
+.small{font-size:13px}
+
+/* Forms */
+form{max-width:480px}
+.input-group{margin-bottom:12px}
+label{display:block; font-size:13px; margin-bottom:6px}
+input[type="text"], input[type="password"], input[type="email"]{
+  width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:6px; font-size:14px;
+}
+
+.footer-note{margin-top:14px; color:var(--muted); font-size:13px}
+
+/* Responsive */
+@media (max-width:720px){
+  .login-options{flex-direction:column}
+  .header{flex-direction:column; align-items:flex-start}
+}
